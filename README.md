@@ -24,8 +24,7 @@ MovieBrowser is a responsive Angular web application that displays popular movie
 
 ## 🚀 Live Demo
 
-👉 [**Click here to view the live site**](https://your-demo-link.com)  
-(will host on Vercel and replace this link.)
+👉 [**Click here to view the live site**](https://movie-browser-fkqlah37o-phyuthant-kyaws-projects.vercel.app/)  
 
 ---
 
