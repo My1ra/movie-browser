@@ -39,6 +39,14 @@ Make sure you have Node.js and Angular CLI installed:
 npm install -g @angular/cli
 ```
 
+## Environment Setup
+
+Before running the app, create your own environment files:
+
+```bash
+cp src/environments/environment.sample.ts src/environments/environment.ts
+```
+
 ## Run Locally
 Clone the project:
 ```bash
