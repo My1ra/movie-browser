@@ -1,59 +1,106 @@
-# MovieBrowser
+# 🎬 MovieBrowser
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+MovieBrowser is a responsive Angular web application that displays popular movies using The Movie Database (TMDb) API. Built with Angular 19, Angular Material, and a clean component-based architecture, it's designed as a showcase project for frontend development.
 
-## Development server
+![Home Page](src/assets/screenshots/home-page.png)
+![Movie Details](src/assets/screenshots/movie-details-page.png)
+![Sidebar](src/assets/screenshots/side-bar.png)
+![About Page](src/assets/screenshots/about-page.png)
 
-To start a local development server, run:
+## 🔥 Features
+
+- 📽️ Browse popular movies with titles, posters, and descriptions
+- 🎨 Beautiful UI with Angular Material
+- 🧭 Client-side routing with Angular Router
+- 📦 Modular & service-based architecture
+- 🔧 Service-based architecture using RxJS + HTTPClient
+
+## 🛠️ Tech Stack
+
+- [Angular 19.2.15](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [RxJS](https://rxjs.dev/)
+- [TMDb API](https://www.themoviedb.org/documentation/api)
+
+## 🚀 Live Demo
+
+👉 [**Click here to view the live site**](https://your-demo-link.com)  
+(will host on Vercel and replace this link.)
+
+---
+
+## 🧑‍💻 Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js and Angular CLI installed:
 
 ```bash
+npm install -g @angular/cli
+```
+
+## Run Locally
+Clone the project:
+```bash
+git clone https://github.com/yourusername/movie-browser.git
+cd movie-browser
+npm install
 ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📁 Project Structure
+src/
+├── app/
+│   ├── layout/                    # Layout components
+│   │   ├── header/                # Header component
+│   │   │   └── header.component.ts / .html / .scss
+│   │   ├── footer/                # Footer component
+│   │   │   └── footer.component.ts / .html / .scss
+│   │   ├── sidebar/               # Sidebar (sidenav)
+│   │   │   └── sidebar.component.ts / .html / .scss
+│   │   └── layout/                # Full layout component
+│   │       └── layout.component.ts / .html / .scss
+│   │
+│   ├── pages/
+│   │   ├── home/                  # Home page
+│   │   └── movie-details/         # Movie detail page
+│   │
+│   ├── services/
+│   │   └── movie.service.ts   # API service for TMDb
+│   │
+│   ├── app.routes.ts          # Angular routing config
+│   └── app.config.ts       
+│
+├── assets/                    # Static files
+├── environments/              # Environment settings (API key, etc.)
+└── main.ts                    # App entry point
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
+## ⚙️ Build for Production
 ```bash
 ng build
 ```
+The optimized build output will be available in the dist/ directory.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🧪 Testing
+Run unit tests:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+Run end-to-end tests (if configured):
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📝 License
+This project is for personal and educational purposes only.
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👩‍💻 Author
+Developed with ❤️ by Phyu Thant Kyaw(Myra)
+
+“Developed to sharpen Angular skills and showcase a passion for UI design and clean code. More features coming soon!”

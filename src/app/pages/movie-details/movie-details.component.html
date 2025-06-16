@@ -1,0 +1,105 @@
+<!-- <span (click)="goBack()" class="back-arrow" aria-label="Back" role="button" tabindex="0">
+  <mat-icon>arrow_back</mat-icon>
+</span>
+
+<div class="details-container" *ngIf="!isLoading; else loading">
+    
+  <mat-card class="details-card">
+    <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" />
+    <mat-card-title>{{ movie.title }}</mat-card-title>
+    <mat-card-subtitle *ngIf="movie.release_date">
+      Release Date: {{ movie.release_date | date }}
+    </mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ movie.overview }}</p>
+      <p *ngIf="movie.vote_average">⭐ <strong>Rating:</strong> {{ movie.vote_average }}/10</p>
+      <p *ngIf="movie.runtime">⏱️ <strong>Runtime:</strong> {{ movie.runtime }} minutes</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="similar-section" *ngIf="similarMovies.length > 0">
+    <div class="section-header">
+        <h2>Similar Movies</h2>
+        <button class="view-all-btn" (click)="viewAllSimilar()">View  All</button>
+    </div>
+
+  <div class="similar-movies">
+    <mat-card
+      class="similar-card"
+      *ngFor="let movie of similarMovies"
+      (click)="goToMovie(movie.id)"
+    >
+      <img
+        mat-card-image
+        [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path"
+        alt="{{ movie.title }}"
+      />
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle *ngIf="movie.vote_average">⭐ {{ movie.vote_average }}/10 </mat-card-subtitle>
+    </mat-card>
+  </div>
+</div>
+
+
+<ng-template #loading>
+  <div class="spinner-container">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
+ -->
+
+
+<!-- Back arrow -->
+<span (click)="goBack()" class="back-arrow" aria-label="Back" role="button" tabindex="0">
+  <mat-icon>arrow_back</mat-icon>
+</span>
+
+<!-- Movie Details -->
+<div class="details-container" *ngIf="!isLoading; else loading">
+  <mat-card class="details-card">
+    <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" />
+    <mat-card-title>{{ movie.title }}</mat-card-title>
+    <mat-card-subtitle *ngIf="movie.release_date">
+      Release Date: {{ movie.release_date | date }}
+    </mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ movie.overview }}</p>
+      <p *ngIf="movie.vote_average">⭐ <strong>Rating:</strong> {{ movie.vote_average }}/10</p>
+      <p *ngIf="movie.runtime">⏱️ <strong>Runtime:</strong> {{ movie.runtime }} minutes</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- Similar Movies -->
+<div class="similar-section" *ngIf="similarMovies.length > 0">
+  <div class="section-header">
+    <h2>Similar Movies</h2>
+    <button class="view-all-btn" (click)="viewAllSimilar()">
+      View All
+      <mat-icon style="margin-left: 4px;">arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <div class="similar-movies-scroll">
+    <mat-card
+      class="similar-card"
+      *ngFor="let movie of similarMovies"
+      (click)="goToMovie(movie.id)"
+    >
+      <img
+        mat-card-image
+        [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path"
+        alt="{{ movie.title }}"
+      />
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle *ngIf="movie.vote_average">⭐ {{ movie.vote_average }}/10</mat-card-subtitle>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Spinner while loading -->
+<ng-template #loading>
+  <div class="spinner-container">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

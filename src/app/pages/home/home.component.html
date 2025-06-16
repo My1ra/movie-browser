@@ -1,0 +1,29 @@
+<div class="home-container">
+  <h2 class="section-title">Discover What Everyone’s Watching</h2>
+
+  <!-- Search bar -->
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search movies..."
+    class="search-input"
+  />
+
+  <!-- Loading spinner -->
+  <div *ngIf="isLoading" class="spinner-container">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+
+  <!-- Movie grid -->
+  <div class="movies-grid" *ngIf="!isLoading">
+    <mat-card *ngFor="let movie of filteredMovies()" class="movie-card" [routerLink]="['/movie', movie.id]">
+      <img mat-card-image [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" [alt]="movie.title" />
+      <div class="card-content">
+        <mat-card-title>{{ movie.title }}</mat-card-title>
+        <mat-card-content>
+          <p class="overview">{{ movie.overview }}</p>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+</div>

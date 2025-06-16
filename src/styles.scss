@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #1E3A8A;
+  --accent-color: #F5F5F5;
+  --bg-color: #ffffff;
+  --text-color: #212121;
+  --text-muted: #757575;
+  --sidebar-bg: #ECEFF1;
+  --footer-bg: #F5F5F5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+//   color: var(--text-color);
+}
+
+html, body { height: 100%; }
+
+mat-sidenav-container {
+  height: 100%;
+}
+
