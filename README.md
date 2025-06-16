@@ -59,33 +59,6 @@ ng serve
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 
-## 📁 Project Structure
-src/
-├── app/
-│   ├── layout/                    # Layout components
-│   │   ├── header/                # Header component
-│   │   │   └── header.component.ts / .html / .scss
-│   │   ├── footer/                # Footer component
-│   │   │   └── footer.component.ts / .html / .scss
-│   │   ├── sidebar/               # Sidebar (sidenav)
-│   │   │   └── sidebar.component.ts / .html / .scss
-│   │   └── layout/                # Full layout component
-│   │       └── layout.component.ts / .html / .scss
-│   │
-│   ├── pages/
-│   │   ├── home/                  # Home page
-│   │   └── movie-details/         # Movie detail page
-│   │
-│   ├── services/
-│   │   └── movie.service.ts   # API service for TMDb
-│   │
-│   ├── app.routes.ts          # Angular routing config
-│   └── app.config.ts       
-│
-├── assets/                    # Static files
-├── environments/              # Environment settings (API key, etc.)
-└── main.ts                    # App entry point
-
 ## ⚙️ Build for Production
 ```bash
 ng build
